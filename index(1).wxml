@@ -1,0 +1,20 @@
+<!--pages/index/index.wxml-->
+<image src="/images/logo.png" class="logo" style="position: relative; left: 226rpx; top: 1rpx" bind:click="handleLogoClick">
+</image>
+<view class="home-page-header" style="width: 750rpx; height: 598rpx; display: block; box-sizing: border-box; position: relative; left: -1rpx; top: -127rpx">
+  <video src="/videos/2.mp4" class="background-video" autoplay loop style="width: 750rpx; height: 439rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx"></video>
+  <swiper class="swiper" indicator-dots="true" indicator-color="#705D3B" indicator-active-color="#FF9933" style="width: 752rpx; height: 772rpx; display: block; box-sizing: border-box; position: relative; left: 1rpx; top: 131rpx" autoplay interval="5000">
+  <block wx:for="{{activityPictures}}" wx:key="index">
+    <swiper-item style="width: 750rpx; height: 525rpx; display: block; box-sizing: content-box; left: -1rpx; top: 305rpx; position: absolute">
+      <view class="swiper-image" style="position: relative; left: 1rpx; top: 301rpx; width: 750rpx; height: 1177rpx; display: block; box-sizing: border-box">
+        <image src="{{item.picture}}" class="activity-image" onTap="navToActivityDetail" style="position: relative; left: -2rpx; top: -303rpx; width: 752rpx; height: 500rpx; display: inline-block; box-sizing: border-box"></image>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<view class="search-bar" onTap="navigateToSearchPage">
+    <text class="search-bar-text" style="position: relative; left: 132rpx; top: 213rpx">Search for products</text>
+    <image class="search-bar-icon" src="/images/search-bar.png" style="width: 636rpx; height: 80rpx; display: inline-block; box-sizing: border-box; left: 114rpx; top: 152rpx; position: relative"></image>
+    <image src="/images/search-icon.png" mode="aspectFit" style="width: 71rpx; height: 60rpx; display: inline-block; box-sizing: border-box; position: relative; left: -592rpx; top: 142rpx"></image>
+  </view>
